@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/resources/firebase/clinica-f5d54-firebase-adminsdk-f4ces-5652c79fc3.json
