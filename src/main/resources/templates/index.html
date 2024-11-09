@@ -1,15 +1,86 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/plantilla :: head">
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .header {
+            background-color: #246c73;
+            height: 1cm;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .title {
+            font-size: 36px;
+            color: rgba(20, 139, 144, 0.76);
+            margin-top: 1.5cm;
+            margin-left: 1.5cm;
+            text-align: right;
+        }
+        .subtitle {
+            font-size: 48px;
+            font-style: italic;
+            color: #4a888d;
+            margin-top: 1cm;
+            margin-left: 1.5cm;
+        }
+        .description {
+            color: black;
+            margin-top: 1.5cm;
+            margin-left: 1.5cm;
+        }
+        .button {
+            background-color: #246c73;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            width: 230px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1.5cm;
+            margin-top: 1.5cm;
+            cursor: pointer;
+        }
+        .image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 578px;
+            height: 585px;
+            z-index: -1; 
+        }
+    </style>
+</head>
+<body>
+    <header th:replace="layout/plantilla :: header" class="header">
+        <a href="#">Inicio</a>
+        <a href="#">Agende su Cita</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contáctenos</a>
+        <a href="#">ENG|ESP</a>
+        <a href="#" class="menu-icon">☰</a> <!-- Icono de menú hamburguesa -->
+    </header>
+
+    <h1 class="title">Clínica MediHub</h1>
+    <p class="subtitle">Cuidamos tu salud en<br>Tiempos difíciles</p>
+    <p class="description">Accede a los mejores servicios de salud.<br>Estaremos contigo en todo el proceso.</p>
+    
+    <button class="button">
+        <span class="icon">📅</span> <!-- Icono de calendario, puedes reemplazarlo con un icono real -->
+        Agendar cita
+    </button>
+
+    <img src="path/to/your/image.jpg" alt="Imagen de la clínica" class="image" />
+</body>
 </html>
