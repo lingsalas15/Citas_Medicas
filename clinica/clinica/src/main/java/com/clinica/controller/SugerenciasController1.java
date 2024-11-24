@@ -24,18 +24,18 @@ public class SugerenciasController1 {
     @GetMapping
     public String mostrarFormulario(Model model) {
         model.addAttribute("sugerencia", new Sugerencia());
-        return "sugerencias";
+        return "sugerencias"; 
     }
 
-    @PostMapping("/sugerencias")
+    @PostMapping("/enviar")
     public String enviarSugerencia(@ModelAttribute Sugerencia sugerencia, Model model) {
-        return "redirect:/sugerencias/confirmacionSugerencia"; 
+        sugerenciaService.guardarSugerencia(sugerencia);
+        return "redirect:/sugerencias/confirmacionSugerencia";
     }
 
-    @GetMapping("/sugerencias/confirmacion")
+    @GetMapping("/confirmacionSugerencia")
     public String mostrarConfirmacion(Model model) {
-
         model.addAttribute("mensaje", "Su sugerencia ha sido enviada con éxito.");
-        return "confirmacionSugerencia"; 
+        return "sugerencias/confirmacionSugerencia"; 
     }
 }

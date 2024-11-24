@@ -5,7 +5,7 @@
     <br>
     <hr style="border: 1px solid #1aabb1;"/>
     <br>
-    <form th:action="@{/sugerencias}" method="post" th:object="${sugerencia}">
+    <form th:action="@{/sugerencias/enviar}" method="post" th:object="${sugerencia}">
         <div class="form-group">
             <label for="nombre" style="color: #086266;">Nombre *</label>
             <input type="text" id="nombre" th:field="*{nombre}" class="form-control" required placeholder="Ingrese su nombre" style="background-color: #1aabb1;"/>
